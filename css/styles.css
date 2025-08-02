@@ -1,0 +1,69 @@
+#sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 40px); 
+  grid-template-rows: repeat(9, 40px);    
+  gap: 2px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #1e1e1e;
+  border: 1px solid #555;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.cell:focus {
+  outline: 2px solid #0d6efd;
+}
+
+.cell.fixed {
+  background-color: #333;
+  font-weight: bold;
+}
+
+.cell {
+  border: 1px solid #555;
+  box-sizing: border-box;
+}
+
+.cell[data-col="0"],
+.cell[data-col="3"],
+.cell[data-col="6"] {
+  border-left: 2px solid #fff;
+}
+
+.cell[data-col="8"] {
+  border-right: 2px solid #fff;
+}
+
+.cell[data-row="0"],
+.cell[data-row="3"],
+.cell[data-row="6"] {
+  border-top: 2px solid #fff;
+}
+
+.cell[data-row="8"] {
+  border-bottom: 2px solid #fff;
+}
+
+.cell.solved {
+  background-color: #0f5132; 
+  color: #fff;
+}
+
+.cell.error {
+  background-color: #6c1a1a;
+  color: #fff;
+}
+
+#game-message {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
