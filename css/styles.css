@@ -1,7 +1,7 @@
 #sudoku-board {
   display: grid;
-  grid-template-columns: repeat(9, 40px); 
-  grid-template-rows: repeat(9, 40px);    
+  grid-template-columns: repeat(9, 40px);
+  grid-template-rows: repeat(9, 40px);
   gap: 2px;
   justify-content: center;
   margin: 0 auto;
@@ -53,7 +53,7 @@
 }
 
 .cell.solved {
-  background-color: #0f5132; 
+  background-color: #0f5132;
   color: #fff;
 }
 
@@ -66,4 +66,42 @@
   font-size: 1.1rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+}
+
+/* Diseño responsive */
+@media (max-width: 576px) {
+  #sudoku-board {
+    grid-template-columns: repeat(9, 10vw);
+    grid-template-rows: repeat(9, 10vw);
+    gap: 1px;
+  }
+
+  .cell {
+    width: 10vw;
+    height: 10vw;
+    font-size: 4vw;
+  }
+
+  .btn,
+  select,
+  #new-game-btn,
+  #check-btn,
+  #show-solution-btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .d-flex.justify-content-center.gap-3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header img {
+    width: 30px;
+    height: 30px;
+  }
 }
